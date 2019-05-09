@@ -1,0 +1,21 @@
+{
+  "name": "oceana_event_form",
+  "version": "1.0.0",
+  "description": "oceana_event_form",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jetsetPanda/oceana_event_form.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jetsetPanda/oceana_event_form/issues"
+  },
+  "homepage": "https://github.com/jetsetPanda/oceana_event_form#readme"
+}
