@@ -1,1 +1,31 @@
-<h1>Oceana RFP Form</h1>
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-md-2 col-sm-1"></div>
+        <div class="col-md-8 col-sm-10 mt-2 mb-5 bg-dark text-white">
+           <h1>Oceana Events Form</h1>
+           <h4>The planner email is: {{emails}}</h4>
+           <form>
+                <div class="form-group">
+                    <label for="clientEmail">Primary Contact Email</label>
+                    <input type="email" class="form-control" id="clientEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="clientName">Primary Contact Name</label>
+                    <input type="text" class="form-control" id="clientName" placeholder="Enter Full Name">
+                </div>
+
+                <div class="form-group form-check">
+                    {{!-- <h3>Dietary Requests</h3> --}}
+                    <label class="form-check-label" for="exampleCheck1">Dietary Requests</label><br>
+                    <input type="checkbox" class="form-check-input" id="vegMenu">
+                    <label class="form-check-label" for="vegMenu">Vegetarian/Vegan</label><br>
+                    <input type="checkbox" class="form-check-input" id="kosherMenu">
+                    <label class="form-check-label" for="kosherMenu">Kosher</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit RFP</button>
+                </form>
+        </div>
+        <div class="col-md-2 col-sm-1 mb-4"></div>
+    </div>
+</div>

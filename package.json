@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/jetsetPanda/oceana_event_form/issues"
   },
-  "homepage": "https://github.com/jetsetPanda/oceana_event_form#readme"
+  "homepage": "https://github.com/jetsetPanda/oceana_event_form#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2"
+  }
 }
