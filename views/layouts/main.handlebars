@@ -55,6 +55,10 @@
                         <label class="form-check-label" for="vegMenu">Use This Card to Pay at Event Conclusion</label><br>
                     </div>
                 </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Number of Guests</label>
+                    <input type="number" class="form-control" id="guestNum" min="2" max="100">
+                </div>
 
                 <div class="form-group form-check">
                     <label class="form-check-label" for="exampleCheck1">Dietary Requests</label><br>
@@ -66,7 +70,7 @@
                     <label class="form-check-label" for="lowSodium">Low Sodium</label><br>
                 </div>
 
-                <a href="#" id="modes"><button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Submit</button></a>
+                <a href="#" id="modes"><button type="button" class="btn btn-primary btn-block mb-3 pb-3" data-toggle="modal" data-target="#myModal">Submit</button></a>
                 </form>
         </div>
         <div class="col-md-2 col-sm-2 mb-4"></div>
@@ -85,13 +89,13 @@
       <div class="modal-body">
         <h6>Thank you for entering your event details. We have validated the credit card deposit and your event has now been confirmed! An email confirmation has also been sent to \email address</h6><br>
         <em><h8>(PROGRAMMING NOTE) The following will be custom personalized responses based on what was entered by the client in the form...</h7></em><br><br>
-        <em><p>scenario: client clicked Kosher</p></em>
+        <em><p>additional charge scenario: client clicked Kosher</p></em>
         <h7 class="text-warning">You indicated that you will have kosher guests attending. Here are our menu choices for your consideration: <span class="text-secondary">\\link to kosher ordering form.\\</span> The lox appetizer is especially fabulous.</h7><br><br>
-        <em><p>scenario: client entered 25 guests</p></em>
-        <h7 class="text-primary">For party sizes of 20 and above such as yours, we would like to offer you the option of beginning the evening with a cocktail reception at our elegant and inviting raw bar space. Click yes to confirm and we will adjust your pricing package. We are happy to provide a multiple room discount so your guests may enjoy both spaces.</h7><br>
+        <em><p>UPSELL scenario: client entered 25 guests</p></em>
+        <h7 class="text-primary">For party sizes of 20 and above such as yours, may we suggest beginning the evening with a cocktail reception at our elegant and inviting raw bar space. Click yes to confirm and we will adjust your pricing package. We are happy to provide a multiple room discount so your guests may enjoy both spaces.</h7><br>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Accept</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Accept</button>
         {{!-- <button type="button" class="btn btn-primary">Save changes</button> --}}
       </div>
     </div>
