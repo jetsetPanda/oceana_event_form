@@ -23,13 +23,69 @@
 </head>
 <body>
     {{{body}}}
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <div class="container">
+    <div class="row mb-5">
+        <div class="col-md-2 col-sm-2"></div>
+        <div class="col-md-8 col-sm-8 mt-2 mb-5 oceanabg text-white">
+           <div class="mp-5 mt-2 oceanablue"><img src="https://www.karenandandrew.com/wp-content/uploads/2017/06/OceanaLogo.png"></div>
+           <h3>Word File Replacement Demo</h3>
+           {{!-- <h4>The planner email is: {{emails}}</h4> --}}
+           <form>
+                <div class="form-group">
+                    <label for="clientName">Primary Contact Name</label>
+                    <input type="text" class="form-control" id="clientName" placeholder="Enter Full Name">
+                </div>    
+
+                <div class="form-group">
+                    <label for="clientEmail">Primary Contact Email</label>
+                    <input type="email" class="form-control" id="clientEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+
+                <div class="form-group form-check">
+                    {{!-- <h3>Dietary Requests</h3> --}}
+                    <label class="form-check-label" for="exampleCheck1">Dietary Requests</label><br>
+                    <input type="checkbox" class="form-check-input" id="vegMenu">
+                    <label class="form-check-label" for="vegMenu">Vegetarian/Vegan</label><br>
+                    <input type="checkbox" class="form-check-input" id="kosherMenu">
+                    <label class="form-check-label" for="kosherMenu">Kosher</label>
+                    <input type="checkbox" class="form-check-input" id="pescaterian">
+                    <label class="form-check-label" for="pescaterian">Pescaterian</label>
+                </div>
+                <button type="submit" id="infomodal" class="btn btn-primary" data-toggle="modal" data-target="#displayModal">Submit RFP</button>
+                </form>
+        </div>
+        <div class="col-md-2 col-sm-2 mb-4"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="displayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Thank you for updating the client form. We will be in touch to confirm your details</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        $('#myModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-})
+        $("#infomodal").on("click", function(event) {
+            $('#displayModal').modal('show'); 
+        })
     </script>
 </body>
 </html>
