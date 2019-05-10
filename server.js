@@ -28,7 +28,7 @@ var emailArr = [{
 
 // Routes
 app.get("/", function(req, res) {
-  res.render("index", emailArr[0]);
+  res.render("index");
 });
 
 // Start our server so that it can begin listening to client requests.
