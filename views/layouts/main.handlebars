@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
     .oceanabg {
-        background-color: #02233c98;
+        background-color: #02233cc8;
     }
     .oceanablue {
         background-color: #012b5d;
@@ -22,7 +22,7 @@
 </style>
 </head>
 <body>
-    {{{body}}}
+    
     <div class="container">
     <div class="row mb-5">
         <div class="col-md-2 col-sm-2"></div>
@@ -41,25 +41,37 @@
                     <input type="email" class="form-control" id="clientEmail" aria-describedby="emailHelp" placeholder="Enter email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Onsite Contact/Host Name</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Onsite Contact Name">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput2">Credit Card Number for Deposit</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter Full Credit Card Number">
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="vegMenu">
+                        <label class="form-check-label" for="vegMenu">Use This Card to Pay at Event Conclusion</label><br>
+                    </div>
+                </div>
 
                 <div class="form-group form-check">
-                    {{!-- <h3>Dietary Requests</h3> --}}
                     <label class="form-check-label" for="exampleCheck1">Dietary Requests</label><br>
                     <input type="checkbox" class="form-check-input" id="vegMenu">
                     <label class="form-check-label" for="vegMenu">Vegetarian/Vegan</label><br>
                     <input type="checkbox" class="form-check-input" id="kosherMenu">
-                    <label class="form-check-label" for="kosherMenu">Kosher</label>
+                    <label class="form-check-label" for="kosherMenu">Kosher</label><br>
                     <input type="checkbox" class="form-check-input" id="pescaterian">
-                    <label class="form-check-label" for="pescaterian">Pescaterian</label>
+                    <label class="form-check-label" for="pescaterian">Pescaterian</label><br>
                 </div>
-                <button type="submit" id="infomodal" class="btn btn-primary" data-toggle="modal" data-target="#displayModal">Submit RFP</button>
+
+                <button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#myModal">Submit</button>
                 </form>
         </div>
         <div class="col-md-2 col-sm-2 mb-4"></div>
     </div>
 </div>
 
-<div class="modal fade" id="displayModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div id="myModal" class="modal fade"  tabindex="-1" >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -78,14 +90,14 @@
     </div>
   </div>
 </div>
-
+{{{body}}}
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script>
-        $("#infomodal").on("click", function(event) {
+    {{!-- <script>
+        $("#submitey").on("click", function(event) {
             $('#displayModal').modal('show'); 
         })
-    </script>
+    </script> --}}
 </body>
 </html>
