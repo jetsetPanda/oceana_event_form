@@ -1,18 +1,20 @@
 <div class="container">
     <div class="row mb-5">
         <div class="col-md-2 col-sm-1"></div>
-        <div class="col-md-8 col-sm-10 mt-2 mb-5 bg-dark text-white">
-           <h1>Oceana Events Form</h1>
-           <h4>The planner email is: {{emails}}</h4>
-           <form>
-                <div class="form-group">
-                    <label for="clientEmail">Primary Contact Email</label>
-                    <input type="email" class="form-control" id="clientEmail" aria-describedby="emailHelp" placeholder="Enter email">
-                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                </div>
+        <div class="col-md-8 col-sm-10 mt-2 mb-5 oceanabg text-white">
+           <div class="mp-5 mt-2 oceanablue"><img src="https://www.karenandandrew.com/wp-content/uploads/2017/06/OceanaLogo.png"></div>
+           <h3>Oceana Events Form</h3>
+           {{!-- <h4>The planner email is: {{emails}}</h4> --}}
+           <form action="https://formspree.io/email@domain.tld" method="POST">
                 <div class="form-group">
                     <label for="clientName">Primary Contact Name</label>
-                    <input type="text" class="form-control" id="clientName" placeholder="Enter Full Name">
+                    <input type="text" name="name" class="form-control" id="clientName" placeholder="Enter Full Name">
+                </div>    
+
+                <div class="form-group">
+                    <label for="clientEmail">Primary Contact Email</label>
+                    <input type="email" name="_replyto" class="form-control" id="clientEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
 
                 <div class="form-group form-check">
@@ -23,7 +25,7 @@
                     <input type="checkbox" class="form-check-input" id="kosherMenu">
                     <label class="form-check-label" for="kosherMenu">Kosher</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit RFP</button>
+                <button type="submit" value="Send" class="btn btn-primary">Submit RFP</button>
                 </form>
         </div>
         <div class="col-md-2 col-sm-1 mb-4"></div>
